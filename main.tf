@@ -23,8 +23,8 @@ resource "azurerm_kubernetes_cluster" "mycluster" {
   dns_prefix          = var.dns_prefix
   
   default_node_pool {
-    name               = "akspool"
-    node_count         = 2
+    name               = var.pool_name
+    node_count         = var.node_count
     vm_size            = var.vm_size
     vnet_subnet_id     = azurerm_subnet.mysubnet.id 
   }
