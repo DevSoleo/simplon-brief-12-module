@@ -51,3 +51,15 @@ variable vm_size {
   type = string
   default = "Standard_D2_v2"
 }
+
+variable pool_name {
+  description = "Node Pool Name"
+  default = "akspool"
+  type = string
+}
+
+variable node_count {
+  description = "Node Count"
+  default = 2
+  type = number
+}
